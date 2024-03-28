@@ -1,0 +1,67 @@
+---
+import TechCard from "../../atoms/TechCard/techCard.astro";
+
+
+
+---
+
+<section class="flex h-[800px] flex-col items-center justify-start gap-[62px]">
+    <div class="mx-auto flex max-w-[877px] flex-col items-center justify-center gap-[27px]">
+        <h1 class="title">My Tech Stack</h1>
+        <p class="subtitle">Technologies I’ve been working with recently</p>
+    </div>
+
+    <div class="mx-auto flex flex-col items-center gap-[24px]">
+        <TechCard
+            title="TypeScript"
+            src="/assets/icons/techs/typescript.svg"
+            alt="TypeScript icon."
+        />
+        <div class="flex items-center justify-center gap-[50px]">
+            <TechCard
+                title="GoLang"
+                src="/assets/icons/techs/golang.svg"
+                alt="GoLang icon."
+            />
+            <TechCard
+                title="Next.js"
+                src="/assets/icons/techs/nextjs.svg"
+                alt="NextJs icon."
+            />
+        </div>
+        <div class="flex items-center justify-center gap-[50px]">
+            <TechCard
+                title="Kotlin"
+                src="/assets/icons/techs/kotlin.svg"
+                alt="Kotlin icon."
+            />\
+            <TechCard
+                title="AWS"
+                src="/assets/icons/techs/aws.svg"
+                alt="AWS icon."
+            />
+            <TechCard
+                title="Astro"
+                src="/assets/icons/techs/astro.svg"
+                alt="Astro icon."
+            />
+        </div>
+        <div class="flex items-center justify-center gap-[50px]">
+            <TechCard
+                title="Vue.js"
+                src="/assets/icons/techs/vuejs.svg"
+                alt="Vue.js icon."
+            />
+            <TechCard
+                title="Angular.js"
+                src="/assets/icons/techs/angular.svg"
+                alt="Angular.js icon."
+            />
+        </div>
+        <TechCard
+            title="Nest.js"
+            src="/assets/icons/techs/nestjs.svg"
+            alt="Nest.js icon."
+        />
+    </div>
+</section>
