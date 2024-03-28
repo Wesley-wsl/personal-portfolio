@@ -1,10 +1,27 @@
 ---
+import TechStack from '../components/molecules/TechStack/techStack.astro';
 import Layout from '../layouts/Layout.astro';
-
 ---
 
 <Layout title="Personal Portfolio.">
-	<main>
-        <h1>Hello World!</h1>
+	<main class="mx-auto max-w-[1215px] px-[15px]">
+		<section class="h-[900px] bg-main-banner bg-center bg-no-repeat">
+			<div class="mx-auto flex max-w-[877px] flex-col items-center justify-center gap-[27px]">
+				<h1
+					class="mt-[159px] text-center text-[67px] font-black text-[--primary] drop-shadow-title"
+				>
+					Wesley Westelley,<br /> Software Developer.
+				</h1>
+				<p class="max-w-[877px] text-center text-[20px] font-normal text-[--secondary]">
+					I am a Software Developer with over 3 years of experience in creating dynamic
+					and efficient web interfaces. Specialized in JavaScript/TypeScript, proficient
+					in using frameworks such as React and Next. I have designed and implemented
+					solutions for various applications, contributing to increased team performance
+					and productivity.
+				</p>
+			</div>
+		</section>
+
+		<TechStack />
 	</main>
 </Layout>
