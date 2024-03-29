@@ -1,21 +1,30 @@
 ---
-
+import { Image } from 'astro:assets';
 ---
 
-<header class="flex items-center justify-between mt-[50px] max-w-[1215px] mx-auto px-[15px]">
-	<img src="/assets/icons/logo.svg" alt="Logo" width="40px" height="30px" class="mr-[15px]" />
+<header class="mx-auto mt-[50px] flex max-w-[1220px] items-center justify-between px-[20px]">
+	<a href="/">
+		<Image
+			src="/assets/icons/logo.svg"
+			alt="Logo"
+			width="40"
+			height="30"
+			loading={'eager'}
+			class="mr-[15px]"
+		/>
+	</a>
 
 	<nav>
-		<ul class="flex gap-[67px] text-[--secondary] text-[18px]">
+		<ul class="flex gap-[67px] text-[18px] text-[--secondary]">
 			<li><a href="/">Home</a></li>
 			<li><a href="/about">About</a></li>
 			<li><a href="/tech-stack">Tech Stack</a></li>
-			<li><a href="#projects">Projects</a></li>
+			<li><a href="/projects">Projects</a></li>
 		</ul>
 	</nav>
 
 	<div class="flex gap-[20px]">
-		<a class="" href="https://github.com/Wesley-wsl" target="_blank">
+		<a href="https://github.com/Wesley-wsl" target="_blank">
 			<img src="/assets/icons/github-icon.svg" alt="Github icon" />
 		</a>
 		<a href="https://www.linkedin.com/in/wesley-westellley" target="_blank">
