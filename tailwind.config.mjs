@@ -6,9 +6,12 @@ export default {
 			dropShadow: {
 				title: '0px 4px 4px rgba(0, 0, 0, 0.25)'
 			},
-            backgroundImage: {
-                "main-banner": "url(/assets/images/main-banner.png)"
-            }
+			boxShadow: {
+				card: '2px 2px 100px 0px rgba(0,0,0,0.07)'
+			},
+			backgroundImage: {
+				'main-banner': 'url(/assets/images/main-banner.png)'
+			}
 		}
 	},
 	plugins: []
