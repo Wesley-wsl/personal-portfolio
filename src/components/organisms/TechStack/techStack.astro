@@ -9,13 +9,13 @@ import TechCard from "../../atoms/TechCard/techCard.astro";
         <p class="subtitle">Technologies I’ve been working with recently</p>
     </div>
 
-    <div class="mx-auto flex flex-col items-center gap-[24px]">
+    <div class="mx-auto flex flex-col flex-wrap md:items-center gap-[24px]">
         <TechCard
             title="TypeScript"
             src="/assets/icons/techs/typescript.svg"
             alt="TypeScript icon."
         />
-        <div class="flex items-center justify-center gap-[50px]">
+        <div class="flex md:items-center md:justify-center gap-[50px]">
             <TechCard
                 title="GoLang"
                 src="/assets/icons/techs/golang.svg"
@@ -27,7 +27,7 @@ import TechCard from "../../atoms/TechCard/techCard.astro";
                 alt="NextJs icon."
             />
         </div>
-        <div class="flex items-center justify-center gap-[50px]">
+        <div class="flex md:items-center  flex-wrap md:justify-center gap-[50px]">
             <TechCard
                 title="Kotlin"
                 src="/assets/icons/techs/kotlin.svg"
@@ -44,7 +44,7 @@ import TechCard from "../../atoms/TechCard/techCard.astro";
                 alt="Astro icon."
             />
         </div>
-        <div class="flex items-center justify-center gap-[50px]">
+        <div class="flex md:items-center md:justify-center gap-[50px]">
             <TechCard
                 title="Vue.js"
                 src="/assets/icons/techs/vuejs.svg"
