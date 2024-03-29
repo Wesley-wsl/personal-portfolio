@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+
+
+---
+
+<footer class="mx-auto flex max-w-[1215px] flex-col gap-[50px] px-[15px]">
+	<div class="flex items-center justify-between">
+		<a href="/">
+			<Image src="/assets/icons/logo.svg" alt="Logo Icon" width="35" height="35" />
+		</a>
+
+		<div class="flex items-center gap-[20px]">
+			<a href="https://github.com/Wesley-wsl" target="_blank">
+				<Image src="/assets/icons/github-icon.svg" alt="Github Icon" width="30" height="30"/>
+			</a>
+			<a href="https://www.linkedin.com/in/wesley-westellley/" target="_blank">
+				<Image src="/assets/icons/linkedin-icon.svg" alt="Linkedin Icon" width="30" height="30"/>
+			</a>
+		</div>
+	</div>
+
+	<hr class="h-[2.4px] w-full bg-[--secondary]" />
+
+	<nav class="pb-[50px]">
+		<ul class="flex items-center gap-[52px] text-[18px] text-[--secondary] flex-wrap">
+			<li><a href="/">Home</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/tech-stack">Tech Stack</a></li>
+			<li><a href="/projects">Projects</a></li>
+		</ul>
+	</nav>
+</footer>
