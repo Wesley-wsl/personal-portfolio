@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
 	title: string;
 	src: string;
@@ -9,6 +11,6 @@ const { title, src, alt } = Astro.props;
 ---
 
 <div class="flex h-[87px] w-[207px] rounded-[9px] items-center justify-center gap-[32px] bg-[--card-background]">
-	<img src={src} alt={alt} />
+	<Image src={src} alt={alt} width="60" height="62"/>
 	<p class="text-[--primary] text-[16px] font-semibold">{title}</p>
 </div>
