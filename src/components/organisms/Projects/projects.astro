@@ -1,0 +1,35 @@
+---
+import ProjectCard from '../../molecules/ProjectCard/projectCard.astro';
+
+interface Props {
+	titleLeft?: boolean;
+}
+
+const { titleLeft = false } = Astro.props;
+---
+
+<section
+	class={`mt-[64px] flex min-h-[800px] flex-col justify-start gap-[62px] ${titleLeft && 'items-center md:items-start'} ${!titleLeft && 'items-center'}`}
+>
+	<div
+		class={`flex flex-col gap-[27px] ${!titleLeft && 'mx-auto max-w-[877px] items-center justify-center'}`}
+	>
+		<h2 class={`title ${titleLeft && 'text-left'}`}>Projects</h2>
+		<p class={`subtitle ${titleLeft && 'text-left'}`}>Things I've built so far</p>
+	</div>
+
+	<div class="grid grid-cols-1 gap-x-[45px] gap-y-[62px] md:grid-cols-2 lg:grid-cols-3">
+		{
+			new Array(6)
+				.fill(0)
+				.map(() => (
+					<ProjectCard
+						src="/assets/images/image.png"
+						alt="Procject 1"
+						preview="https://github.com/Wesley-wsl"
+						repository="https://github.com/Wesley-wsl"
+					/>
+				))
+		}
+	</div>
+</section>
