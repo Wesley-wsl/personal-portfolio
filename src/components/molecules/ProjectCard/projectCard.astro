@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	src: string;
+	alt: string;
+	preview: string;
+	repository: string;
+}
+
+const { src, alt, preview, repository } = Astro.props;
+---
+
+<div class="max-h-[567px] max-w-[373px] bg-white shadow-card rounded-[20px]">
+	<Image src={src} alt={alt} width="365" height="260" />
+
+	<div class="flex flex-col px-[28px]">
+		<h3 class="mt-[20px] text-[26px] font-medium text-black line-clamp-1 md:text-[24px] xl:text-[27px]">Viva a Originalidade</h3>
+		<p class="mt-[17px] h-[130px] max-w-[314px] text-[17px] text-[--secondary] line-clamp-6 md:line-clamp-5 xl:text-[18px]">
+			This is sample project description random things are here in description This is sample
+			project lorem ipsum generator for dummy content
+		</p>
+
+		<p class="mt-[17px] max-w-[314px] text-[14px] text-[#42446E] line-clamp-1">
+			<b>Tech stack</b>: HTML, JavaScript, SASS, React
+		</p>
+	</div>
+
+	<div class="mt-[24px] flex items-center justify-between px-[28px] pb-[25px]">
+		<div class="flex items-center gap-[10px]">
+			<Image
+				src="/assets/icons/link-chain-icon.svg"
+				alt="Link chain icon"
+				width="20"
+				height="20"
+			/>
+			<p>
+				<a href={preview} target="_blank" class="text-[14px] font-normal underline xl:text-[16px]">
+					Live Preview
+				</a>
+			</p>
+		</div>
+		<div class="flex items-center gap-[10px]">
+			<Image
+				src="/assets/icons/github-black-icon.svg"
+				alt="Github icon"
+				width="20"
+				height="20"
+			/>
+			<p>
+				<a href={repository} target="_blank" class="text-[14px] font-normal underline xl:text-[16px]">
+					View Code
+				</a>
+			</p>
+		</div>
+	</div>
+</div>
