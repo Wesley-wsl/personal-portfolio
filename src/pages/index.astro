@@ -1,18 +1,24 @@
 ---
-import TechStack from '../components/molecules/TechStack/techStack.astro';
+import Projects from '../components/organisms/Projects/projects.astro';
+import TechStackHorizontal from '../components/organisms/TechStack/TechStackHorizontal/techStackHorizontal.astro';
+import TechStack from '../components/organisms/TechStack/techStack.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Personal Portfolio.">
-	<main class="mx-auto max-w-[1215px] px-[15px]">
-		<section class="h-[900px] bg-main-banner bg-center bg-no-repeat">
+	<main class="mx-auto mb-[200px] max-w-[1220px] px-[20px] sm:px-[0px]">
+		<section
+			class="mb-[70px] min-h-[500px] bg-center bg-no-repeat sm:mb-[0px] sm:h-[900px] sm:bg-main-banner"
+		>
 			<div class="mx-auto flex max-w-[877px] flex-col items-center justify-center gap-[27px]">
 				<h1
-					class="mt-[159px] text-center text-[67px] font-black text-[--primary] drop-shadow-title"
+					class="mt-[100px] text-center text-[50px] font-black text-[--primary] drop-shadow-title sm:mt-[230px] md:mt-[159px] md:text-[67px]"
 				>
 					Wesley Westelley,<br /> Software Developer.
 				</h1>
-				<p class="max-w-[877px] text-center text-[20px] font-normal text-[--secondary]">
+				<p
+					class="max-w-[877px] px-[20px] text-center text-[17px] font-normal text-[--secondary] md:text-[20px] lg:px-[0px]"
+				>
 					I am a Software Developer with over 3 years of experience in creating dynamic
 					and efficient web interfaces. Specialized in JavaScript/TypeScript, proficient
 					in using frameworks such as React and Next. I have designed and implemented
@@ -22,6 +28,13 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 
-		<TechStack />
+		<div class="md:hidden block">
+			<TechStackHorizontal center />
+		</div>
+
+		<div class="hidden md:block">
+			<TechStack />
+		</div>
+		<Projects />
 	</main>
 </Layout>
