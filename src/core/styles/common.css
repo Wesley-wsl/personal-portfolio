@@ -9,25 +9,27 @@
 	--card-title: #000;
 	--success: #d7ffe0;
 	--card-background: #f6f8fa;
-    --card-tech: #42446E;
+	--card-tech: #42446e;
+	--card-tech-bg: #F2F4F6;
 	--green: #d7ffe0;
-    --card-project-background: #fff;
-    --card-project-link: #2b2b2b;
-    --card-project-link-icon: #000;
+	--card-project-background: #fff;
+	--card-project-link: #2b2b2b;
+	--card-project-link-icon: #000;
 }
 
 html.dark {
-	--primary: #CCCCCC;
-	--secondary: #A7A7A7;
+    --primary: #cccccc;
+	--secondary: #a7a7a7;
 	--background: #191919;
-	--card-title: #CCCCCC;
+	--card-title: #cccccc;
 	--success: #d7ffe0;
 	--card-background: #363636;
 	--green: #d7ffe0;
-    --card-tech: #CCCCCC;
-    --card-project-background: #363636;
-    --card-project-link: #fff;
-    --card-project-link-icon: #fff;
+	--card-tech: #cccccc;
+    --card-tech-bg: #b9b9b9;
+	--card-project-background: #363636;
+	--card-project-link: #fff;
+	--card-project-link-icon: #fff;
 }
 
 * {
@@ -65,9 +67,9 @@ body {
 }
 
 .linkIcon > svg > path {
-    stroke: var(--card-project-link-icon)
+	stroke: var(--card-project-link-icon);
 }
 
 .githubIcon > svg path {
-    fill: var(--card-project-link-icon)
+	fill: var(--card-project-link-icon);
 }
