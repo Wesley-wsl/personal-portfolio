@@ -10,7 +10,8 @@ export default {
 				card: '2px 2px 100px 0px rgba(0,0,0,0.07)'
 			},
 			backgroundImage: {
-				'main-banner': 'url(/assets/images/main-banner.png)'
+				'main-banner': 'url(/assets/images/main-banner.png)',
+				'main-banner-dark': 'url(/assets/images/main-banner-dark.png)',
 			}
 		}
 	},
