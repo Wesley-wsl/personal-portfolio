@@ -3,45 +3,71 @@
 @tailwind utilities;
 
 :root {
-    --primary: #2b2b2b;
-    --secondary: #666666;
-    --background: #ffffff;
-    --card-title: #000;
-    --success: #d7ffe0;
-    --card-background: #F6F8FA;
-    --green: #D7FFE0;
+	--primary: #2b2b2b;
+	--secondary: #666666;
+	--background: #ffffff;
+	--card-title: #000;
+	--success: #d7ffe0;
+	--card-background: #f6f8fa;
+    --card-tech: #42446E;
+	--green: #d7ffe0;
+    --card-project-background: #fff;
+    --card-project-link: #2b2b2b;
+    --card-project-link-icon: #000;
+}
+
+html.dark {
+	--primary: #CCCCCC;
+	--secondary: #A7A7A7;
+	--background: #191919;
+	--card-title: #CCCCCC;
+	--success: #d7ffe0;
+	--card-background: #363636;
+	--green: #d7ffe0;
+    --card-tech: #CCCCCC;
+    --card-project-background: #363636;
+    --card-project-link: #fff;
+    --card-project-link-icon: #fff;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter Variable', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter Variable', sans-serif;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 html {
-    font-family: system-ui, sans-serif;
+	font-family: system-ui, sans-serif;
 }
 
 body {
-    background-color: var(---background);
+	background-color: var(--background);
 }
 
 @layer components {
 	.title {
-		@apply text-center text-[40px] md:text-[48px] font-black text-[--primary];
+		@apply text-center text-[40px] font-black text-[--primary] md:text-[48px];
 	}
 
 	.subtitle {
-		@apply max-w-[719px] text-center text-[22px] md:text-[30px] font-normal text-[--secondary];
+		@apply max-w-[719px] text-center text-[22px] font-normal text-[--secondary] md:text-[30px];
 	}
 }
 
 .tech-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.linkIcon > svg > path {
+    stroke: var(--card-project-link-icon)
+}
+
+.githubIcon > svg path {
+    fill: var(--card-project-link-icon)
 }

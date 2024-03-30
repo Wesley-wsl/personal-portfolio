@@ -2,20 +2,24 @@
 import TechCard from '../../../atoms/TechCard/techCard.astro';
 
 interface Props {
-    center?: boolean;
+	center?: boolean;
 }
 
 const { center = false } = Astro.props;
-
 ---
 
-<section class={`flex ${center && "justify-center items-center"} flex-col gap-[62px] mt-[128px]`}>
+<section
+	class={`flex ${center && 'justify-center items-center'} flex-col gap-[62px] mt-[128px]`}
+	data-aos="fade"
+>
 	<div class="flex max-w-[877px] flex-col gap-[27px]">
-		<h2 class={`title text-left ${center && "text-center"}`}>My Tech Stack</h2>
-		<p class={`subtitle text-left ${center && "text-center"}`}>Technologies I’ve been working with recently</p>
+		<h2 class={`title text-left ${center && 'text-center'}`}>My Tech Stack</h2>
+		<p class={`subtitle text-left ${center && 'text-center'}`}>
+			Technologies I’ve been working with recently
+		</p>
 	</div>
 
-	<div class="flex flex-wrap max-w-[690px] gap-x-[34px] gap-y-[30px] items-center justify-center">
+	<div class="flex max-w-[690px] flex-wrap items-center justify-center gap-x-[34px] gap-y-[30px]">
 		<TechCard
 			title="TypeScript"
 			src="/assets/icons/techs/typescript.svg"

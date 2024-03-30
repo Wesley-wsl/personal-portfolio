@@ -25,22 +25,40 @@ const { title, company, date, location } = Astro.props;
 	<div
 		class="mt-[10px] flex flex-col items-start justify-between gap-[5px] sm:flex-row sm:items-center sm:gap-[30px]"
 	>
-		<div class="flex flex-col items-center sm:flex-row gap-[5px] sm:gap-[0px]">
+		<div class="flex flex-col items-center gap-[5px] sm:flex-row sm:gap-[0px]">
 			<div class="flex items-center gap-[10px] sm:gap-[4px]">
-				<Image src="/assets/icons/company-icon.svg" width="16" height="12" alt="Company" />
+				<Image
+					src="/assets/icons/company-icon.svg"
+					width="16"
+					height="12"
+					alt="Company"
+					loading="lazy"
+				/>
 				<p class="w-[170px] text-[12px] font-medium text-[#A7A7A7]">
 					{company}
 				</p>
 			</div>
 			<div class="flex items-center gap-[10px] sm:gap-[4px]">
-				<Image src="/assets/icons/location-icon.svg" width="16" height="12" alt="Company" />
+				<Image
+					src="/assets/icons/location-icon.svg"
+					width="16"
+					height="12"
+					alt="Company"
+					loading="lazy"
+				/>
 				<p class="w-[170px] text-[12px] font-medium text-[#A7A7A7]">
 					{location}
 				</p>
 			</div>
 		</div>
 		<div class="flex items-center gap-[10px] sm:gap-[4px]">
-			<Image src="/assets/icons/location-icon.svg" width="16" height="12" alt="Company" />
+			<Image
+				src="/assets/icons/location-icon.svg"
+				width="16"
+				height="12"
+				alt="Company"
+				loading="lazy"
+			/>
 			<p class="w-[170px] text-[12px] font-medium text-[#A7A7A7] sm:w-[120px]">
 				{date}
 			</p>
