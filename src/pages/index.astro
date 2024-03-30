@@ -8,11 +8,13 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Personal Portfolio.">
 	<main class="mx-auto mb-[200px] max-w-[1220px] px-[20px] sm:px-[0px]">
 		<section
-			class="mb-[70px] min-h-[500px] bg-center bg-no-repeat sm:mb-[0px] sm:h-[900px] sm:bg-main-banner"
+			class="mb-[70px] min-h-[500px] bg-center bg-no-repeat sm:mb-[0px] sm:h-[900px]"
+			id="banner-section"
+			data-aos="zoom-in"
 		>
 			<div class="mx-auto flex max-w-[877px] flex-col items-center justify-center gap-[27px]">
 				<h1
-					class="mt-[100px] text-center text-[50px] font-black text-[--primary] drop-shadow-title sm:mt-[230px] md:mt-[159px] md:text-[67px]"
+					class="mt-[100px] text-center text-[50px] font-black text-[--primary] drop-shadow-title sm:mt-[200px] md:text-[67px]"
 				>
 					Wesley Westelley,<br /> Software Developer.
 				</h1>
@@ -28,7 +30,7 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 
-		<div class="md:hidden block">
+		<div class="block md:hidden">
 			<TechStackHorizontal center />
 		</div>
 
@@ -38,3 +40,13 @@ import Layout from '../layouts/Layout.astro';
 		<Projects />
 	</main>
 </Layout>
+
+<script is:inline>
+	const element = document.documentElement;
+	const isDark = element.classList.contains('dark');
+	if (isDark) {
+		document.getElementById('banner-section')?.classList.add('sm:bg-main-banner-dark');
+	} else {
+		document.getElementById('banner-section')?.classList.add('sm:bg-main-banner');
+	}
+</script>
