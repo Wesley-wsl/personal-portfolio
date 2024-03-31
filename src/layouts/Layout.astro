@@ -15,17 +15,41 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Wesley Westelley is a Software Developer with over 3 years of experience in creating dynamic and efficient web interfaces." />
+		<meta
+			name="description"
+			content="Wesley Westelley is a Software Developer with over 3 years of experience in creating dynamic and efficient web interfaces."
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/assets/icons/logo.svg" />
-        <meta property="og:title" content="Wesley Westelley" />
-        <meta property="og:description" content="Wesley Westelley is a Software Developer with over 3 years of experience in creating dynamic and efficient web interfaces." />
-        <meta property="og:image" content="/assets/icons/logo.svg" />
-        <meta property="og:type" content="website" />
-        <meta property="twitter:title" content="Wesley Westelley" />
-        <meta property="twitter:description" content="Wesley Westelley is a Software Developer with over 3 years of experience in creating dynamic and efficient web interfaces." />
-        <meta property="twitter:image" content="/assets/icons/logo.svg" />
+		<meta property="og:title" content="Wesley Westelley" />
+		<meta
+			property="og:description"
+			content="Wesley Westelley is a Software Developer with over 3 years of experience in creating dynamic and efficient web interfaces."
+		/>
+		<meta property="og:image" content="/assets/icons/logo.svg" />
+		<meta property="og:type" content="website" />
+		<meta property="twitter:title" content="Wesley Westelley" />
+		<meta
+			property="twitter:description"
+			content="Wesley Westelley is a Software Developer with over 3 years of experience in creating dynamic and efficient web interfaces."
+		/>
+		<meta property="twitter:image" content="/assets/icons/logo.svg" />
+		<!-- Google tag (gtag.js) -->
+		<script
+			type="text/partytown"
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-6HPLRGPBMT"></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-6HPLRGPBMT');
+		</script>
 		<meta name="generator" content={Astro.generator} />
+
 		<title>{title}</title>
 	</head>
 	<body class="text-[--primary]">
