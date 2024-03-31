@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 import LinkChaingIcon from '/assets/icons/link-chain-icon.svg?raw';
 import GithubBlackIcon from '/assets/icons/github-black-icon.svg?raw';
-import imageUrlBuilder from "@sanity/image-url";
-import { sanityClient } from "sanity:client";
+import imageUrlBuilder from '@sanity/image-url';
+import { sanityClient } from 'sanity:client';
 import type { IProjectsData } from '../../../core/types/rest';
 
 interface Props {
@@ -12,14 +12,10 @@ interface Props {
 
 const { data } = Astro.props;
 
-const builder = imageUrlBuilder(sanityClient)
+const builder = imageUrlBuilder(sanityClient);
 
-const image: any = data.image && builder
-  .image(data.image)
-  .width(373)
-  .height(260)
-  .fit('max')
-  .auto('format')
+const image: any =
+	data.image && builder.image(data.image).width(373).height(260).fit('max').auto('format');
 ---
 
 <div
@@ -32,7 +28,7 @@ const image: any = data.image && builder
 		width="373"
 		height="260"
 		loading="lazy"
-        class="rounded-t-[20px]"
+		class="rounded-t-[20px]"
 	/>
 
 	<div class="flex flex-col px-[28px]">
@@ -48,38 +44,52 @@ const image: any = data.image && builder
 		</p>
 
 		<p class="mt-[17px] line-clamp-1 max-w-[314px] text-[14px] text-[--card-tech]">
-			<b>Tech stack</b>: HTML, JavaScript, SASS, React
+			<b>Tech stack</b>: {data.techStack}
 		</p>
 	</div>
 
 	<div class="mt-[24px] flex items-center justify-between px-[28px] pb-[25px]">
-		<div class="flex items-center gap-[10px]">
-			<span class="linkIcon">
-				<Fragment set:html={LinkChaingIcon} />
-			</span>
-			<p>
-				<a
-					href={data.liveLink}
-					target="_blank"
-					class="text-[14px] font-normal text-[--card-project-link] underline xl:text-[16px]"
-				>
-					Live Preview
-				</a>
-			</p>
-		</div>
-		<div class="flex items-center gap-[10px]">
-			<span class="githubIcon">
-				<Fragment set:html={GithubBlackIcon} />
-			</span>
-			<p>
-				<a
-					href={data.codeLink}
-					target="_blank"
-					class="text-[14px] font-normal text-[--card-project-link] underline xl:text-[16px]"
-				>
-					View Code
-				</a>
-			</p>
-		</div>
+		{
+			data.liveLink ? (
+				<div class="flex items-center gap-[10px]">
+					<span class="linkIcon">
+						<Fragment set:html={LinkChaingIcon} />
+					</span>
+
+					<p>
+						<a
+							href={data.liveLink}
+							target="_blank"
+							class="text-[14px] font-normal text-[--card-project-link] underline xl:text-[16px]"
+						>
+							Live Preview
+						</a>
+					</p>
+				</div>
+			) : (
+				<div />
+			)
+		}
+
+		{
+			data.codeLink ? (
+				<div class="flex items-center gap-[10px]">
+					<span class="githubIcon">
+						<Fragment set:html={GithubBlackIcon} />
+					</span>
+					<p>
+						<a
+							href={data.codeLink}
+							target="_blank"
+							class="text-[14px] font-normal text-[--card-project-link] underline xl:text-[16px]"
+						>
+							View Code
+						</a>
+					</p>
+				</div>
+			) : (
+				<div />
+			)
+		}
 	</div>
 </div>

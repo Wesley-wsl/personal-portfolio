@@ -12,7 +12,7 @@ export default defineConfig({
 		sanity({
 			projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
 			dataset: import.meta.env.VITE_SANITY_DATASET,
-			useCdn: true
+			useCdn: true,
 		})
 	]
 });
