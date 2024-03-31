@@ -10,6 +10,7 @@ export const HeaderMobile = () => {
 			<motion.button
 				className={`z-20 flex h-[45px] w-[45px] cursor-pointer flex-col items-center justify-center gap-[6px] ${isMobileHeaderOpen && 'fixed right-5 top-12'}`}
 				onClick={() => setIsMobileHeaderOpen(!isMobileHeaderOpen)}
+				aria-label="mobile header"
 			>
 				<motion.div
 					className="h-[3px] w-[35px] rounded bg-[--secondary]"
