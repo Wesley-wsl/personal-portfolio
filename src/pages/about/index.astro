@@ -1,0 +1,66 @@
+---
+import Experience from '../../components/molecules/Experience/experience.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Wesley - About">
+	<main
+		class="mx-auto mb-[200px] flex min-h-[600px] max-w-[1220px] flex-col gap-[45px] px-[20px]"
+		data-aos="fade"
+	>
+		<section class="flex max-w-[710px] flex-col gap-[38px]">
+			<h1 class="title mt-[128px] text-left">About Me</h1>
+			<p class="text-[17px] text-[--secondary] md:text-[18px]">
+				Software Developer with more than 3 years of experience creating dynamic and
+				efficient web interfaces. Specialized in JavaScript/TypeScript, with proficiency in
+				using frameworks such as React and Next. I have designed and implemented solutions
+				for various applications, contributing to increased team performance and
+				productivity.
+			</p>
+			<p class="text-[17px] text-[--secondary] md:text-[18px]">
+				Demonstrate solid skills by transforming designs into working code for 15+
+				applications, ensuring SEO excellence, accessibility, performance, and performance
+				to best development practices. Always committed to continuous updating regarding the
+				latest trends and technologies in the world of development.
+			</p>
+		</section>
+
+		<section class="flex max-w-[710px] flex-col gap-[38px]">
+			<h1 class="title text-left">Work Experience</h1>
+
+			<div class="flex flex-col gap-[32px]">
+				<Experience
+					title="Front-end Developer"
+					company="Opss Bank"
+					location="Remote"
+					date="Ago 2022 - Currently"
+				/>
+				<Experience
+					title="Full-stack Developer"
+					company="Async House"
+					location="Remote"
+					date="Abr 2021 - Currently"
+				/>
+				<Experience
+					title="Front-end Developer"
+					company="Connect People Genesis"
+					location="Remote"
+					date="Sep 2022 - Dec 2023"
+				/>
+			</div>
+		</section>
+
+		<section class="flex max-w-[710px] flex-col gap-[38px]">
+			<h1 class="title text-left">Education</h1>
+
+			<div class="flex flex-col gap-[32px]">
+				<Experience
+					title="Full Cycle Web Development"
+					company="Full Cycle"
+					location="Remote"
+					date="Abr 2022 - Out 2023"
+				/>
+			</div>
+		</section>
+	</main>
+</Layout>

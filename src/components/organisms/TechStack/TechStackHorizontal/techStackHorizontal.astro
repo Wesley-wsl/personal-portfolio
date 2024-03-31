@@ -1,0 +1,37 @@
+---
+import TechCard from '../../../atoms/TechCard/techCard.astro';
+
+interface Props {
+	center?: boolean;
+}
+
+const { center = false } = Astro.props;
+---
+
+<section
+	class={`flex ${center && 'justify-center items-center'} flex-col gap-[62px] mt-[128px]`}
+	data-aos="fade"
+>
+	<div class="flex max-w-[877px] flex-col gap-[27px]">
+		<h2 class={`title text-left ${center && 'text-center'}`}>My Tech Stack</h2>
+		<p class={`subtitle text-left ${center && 'text-center'}`}>
+			Technologies I’ve been working with recently
+		</p>
+	</div>
+
+	<div class="flex max-w-[690px] flex-wrap items-center justify-center gap-x-[34px] gap-y-[30px]">
+		<TechCard
+			title="TypeScript"
+			src="/assets/icons/techs/typescript.svg"
+			alt="TypeScript icon."
+		/>
+		<TechCard title="GoLang" src="/assets/icons/techs/golang.svg" alt="GoLang icon." />
+		<TechCard title="Next.js" src="/assets/icons/techs/nextjs.svg" alt="NextJs icon." />
+		<TechCard title="Kotlin" src="/assets/icons/techs/kotlin.svg" alt="Kotlin icon." />
+		<TechCard title="AWS" src="/assets/icons/techs/aws.svg" alt="AWS icon." />
+		<TechCard title="Astro" src="/assets/icons/techs/astro.svg" alt="Astro icon." />
+		<TechCard title="Vue.js" src="/assets/icons/techs/vuejs.svg" alt="Vue.js icon." />
+		<TechCard title="Angular.js" src="/assets/icons/techs/angular.svg" alt="Angular.js icon." />
+		<TechCard title="Nest.js" src="/assets/icons/techs/nestjs.svg" alt="Nest.js icon." />
+	</div>
+</section>

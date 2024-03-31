@@ -1,10 +1,52 @@
 ---
+import Projects from '../components/organisms/Projects/projects.astro';
+import TechStackHorizontal from '../components/organisms/TechStack/TechStackHorizontal/techStackHorizontal.astro';
+import TechStack from '../components/organisms/TechStack/techStack.astro';
 import Layout from '../layouts/Layout.astro';
-
 ---
 
 <Layout title="Personal Portfolio.">
-	<main>
-        <h1>Hello World!</h1>
+	<main class="mx-auto mb-[200px] max-w-[1220px] px-[20px] sm:px-[0px]">
+		<section
+			class="mb-[70px] min-h-[500px] bg-center bg-no-repeat sm:mb-[0px] sm:h-[900px]"
+			id="banner-section"
+			data-aos="zoom-in"
+		>
+			<div class="mx-auto flex max-w-[877px] flex-col items-center justify-center gap-[27px]">
+				<h1
+					class="mt-[100px] text-center text-[50px] font-black text-[--primary] drop-shadow-title sm:mt-[200px] md:text-[67px]"
+				>
+					Wesley Westelley,<br /> Software Developer.
+				</h1>
+				<p
+					class="max-w-[877px] px-[20px] text-center text-[17px] font-normal text-[--secondary] md:text-[20px] lg:px-[0px]"
+				>
+					I am a Software Developer with over 3 years of experience in creating dynamic
+					and efficient web interfaces. Specialized in JavaScript/TypeScript, proficient
+					in using frameworks such as React and Next. I have designed and implemented
+					solutions for various applications, contributing to increased team performance
+					and productivity.
+				</p>
+			</div>
+		</section>
+
+		<div class="block md:hidden">
+			<TechStackHorizontal center />
+		</div>
+
+		<div class="hidden md:block">
+			<TechStack />
+		</div>
+		<Projects />
 	</main>
 </Layout>
+
+<script is:inline>
+	const element = document.documentElement;
+	const isDark = element.classList.contains('dark');
+	if (isDark) {
+		document.getElementById('banner-section')?.classList.add('sm:bg-main-banner-dark');
+	} else {
+		document.getElementById('banner-section')?.classList.add('sm:bg-main-banner');
+	}
+</script>

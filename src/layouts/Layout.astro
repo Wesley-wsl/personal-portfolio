@@ -1,8 +1,11 @@
 ---
 import '@fontsource-variable/inter';
+import Header from '../components/organisms/Header/header.astro';
+import '../core/styles/common.css';
+import Footer from '../components/organisms/Footer/footer.astro';
 
 interface Props {
-    title: string;
+	title: string;
 }
 
 const { title } = Astro.props;
@@ -10,36 +13,21 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/png" href="/assets/icons/logo.png" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-    </head>
-    <body class="text-[--primary]">
-        <slot />
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/assets/icons/logo.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="text-[--primary]">
+		<Header />
+
+		<slot />
+
+		<Footer />
+
+		<script src="../core/styles/aos.ts"></script>
+	</body>
 </html>
-
-<style is:global>
-    :root {
-        --primary: #2B2B2B;
-        --secondary: #666666
-        --background: #FFFFFF;
-        --card-title: #000;
-        --success: #D7FFE0
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Inter Variable', sans-serif;
-    }
-
-    html {
-        font-family: system-ui, sans-serif;
-    }
-</style>
